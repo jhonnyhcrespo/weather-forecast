@@ -9,6 +9,7 @@
     "test:run": "vitest run",
     "build": "tsc -b && vite build",
     "lint": "eslint .",
+    "quality": "pnpm lint && pnpm tsc --noEmit",
     "preview": "vite preview"
   },
   "dependencies": {
