@@ -1,7 +1,7 @@
 import { describe, it, expect, beforeEach, vi } from "vitest";
 import type { Coordinate } from "../../../src/types";
 import { weatherService } from "./weatherService"
-import { mockForecast, mockForecastApiResponse } from "./mockForecastAPIResponse.ts";
+import { mockForecast, mockForecastApiResponse } from "./mockForecastApiResponse.ts";
 import { mockPointApiResponse } from "./mockPointApiResponse.ts";
 
 globalThis.fetch = vi.fn();
