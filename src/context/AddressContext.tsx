@@ -35,10 +35,6 @@ export const AddressProvider: FC<AddressProviderProps> = ({ children }) => {
     enabled: !!address, // only query when address has a value
   });
 
-  console.log("[AddressProvider] - address", address);
-  console.log("[AddressProvider] - forecast", forecast);
-  console.log("[AddressProvider] - selectedPeriod", selectedPeriod);
-
   const fetchForecast = (address: string) => {
     setAddress(address)
   }
