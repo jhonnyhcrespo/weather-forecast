@@ -5,7 +5,7 @@ import ForecastMiniCard from './forecast-mini-card/ForecastMiniCard';
 
 interface ForecastGridProps {
   periods: Array<Period>;
-  selectPeriod: (periodNumber: number) => void;
+  selectPeriod: (period: Period) => void;
 }
 
 const ForecastGrid: FC<ForecastGridProps> = ({ periods, selectPeriod }) => {
@@ -13,6 +13,7 @@ const ForecastGrid: FC<ForecastGridProps> = ({ periods, selectPeriod }) => {
     <SimpleGrid columns={{ base: 1, sm: 2, md: 3, lg: 4 }} gapY={4} gapX={4}>
       {periods.map((period) => (
         <ForecastMiniCard
+          key={period.number}
           period={period}
           selectPeriod={selectPeriod}
         />

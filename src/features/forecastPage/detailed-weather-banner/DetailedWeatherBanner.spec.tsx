@@ -54,7 +54,7 @@ describe("DetailedWeatherBanner", () => {
     renderWithChakra(<DetailedWeatherBanner {...mockProps} />);
     expect(
       screen.getByTestId("detailed-weather-banner-wind")
-    ).toHaveTextContent("E 14 mph");
+    ).toHaveTextContent("Wind: E 14 mph");
   });
 
   test("display the detailed forecast", () => {

@@ -4,13 +4,13 @@ import type { Period } from "../../../types";
 
 interface ForecastMiniCardProps {
   period: Period;
-  selectPeriod: (periodNumber: number) => void;
+  selectPeriod: (period: Period) => void;
 }
 
 const ForecastMiniCard: FC<ForecastMiniCardProps> = ({ period, selectPeriod }) => {
   return (
     <Box
-      onClick={() => selectPeriod(period.number)}
+      onClick={() => selectPeriod(period)}
       role="button"
       cursor="pointer"
       backgroundColor={"#FAFBFC"}

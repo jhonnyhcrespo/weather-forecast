@@ -52,6 +52,7 @@ export async function handler(event){
     const coordinates = await geocodingService.getCoordinates(address);
     const pointMetadata = await weatherService.getPointMetadata(coordinates);
     const forecast = await weatherService.getForecast(pointMetadata.forecast)
+
     return {
       statusCode: 200,
       headers,
