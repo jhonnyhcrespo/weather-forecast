@@ -86,6 +86,9 @@ jobs:
 
     - name: Build
       run: pnpm run build
+      env:
+        VITE_GOOGLE_PLACES_API_KEY: ${{ secrets.VITE_GOOGLE_PLACES_API_KEY }}
+        VITE_FORECAST_API_URL: ${{ secrets.VITE_FORECAST_API_URL }}
 
     - name: Upload build artifacts
       uses: actions/upload-artifact@v4
