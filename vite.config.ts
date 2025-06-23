@@ -10,4 +10,7 @@ export default defineConfig({
     environment: "jsdom",
     setupFiles: "./src/test/setup.ts", // run before each test
   },
+  resolve: {
+    extensions: [".ts", ".tsx", ".js", ".jsx", ".json"],
+  },
 });
