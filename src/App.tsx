@@ -1,11 +1,14 @@
-import { Container, Heading } from '@chakra-ui/react'
 import './App.css'
+import { QueryClient, QueryClientProvider } from '@tanstack/react-query';
+import ForecastPage from './features/forecastPage/ForecastPage';
+
+const queryClient = new QueryClient();
 
 function App() {
   return (
-    <Container>
-      <Heading>Weather Forecast</Heading>
-    </Container>
+    <QueryClientProvider client={queryClient}>
+      <ForecastPage />
+    </QueryClientProvider>
   );
 }
 
